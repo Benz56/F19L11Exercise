@@ -24,7 +24,7 @@ public class Facade {
     }
 
     public int[] fillArray(int size, int max) {
-        return intArray = Stream.generate(() -> random.nextInt(max + 1)).limit(size).mapToInt(i -> i).toArray();
+        return intArray = Stream.generate(() -> random.nextInt(max)).limit(size).mapToInt(i -> i).toArray();
     }
 
     public int sumOfDivisors(int divisor) {
@@ -35,7 +35,7 @@ public class Facade {
         if (size >= max) {
             System.out.println("size er større end max!");
         }
-        return intArray = size < max ? ThreadLocalRandom.current().ints(0, max + 1).distinct().limit(size).sorted().toArray() : null;
+        return intArray = size < max ? ThreadLocalRandom.current().ints(0, max).distinct().limit(size).sorted().toArray() : null;
     }
 
     /**
