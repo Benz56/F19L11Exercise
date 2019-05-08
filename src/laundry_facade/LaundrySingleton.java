@@ -13,6 +13,9 @@ public class LaundrySingleton implements LaundryConstants {
 
     private static LaundrySingleton instance;
 
+    private LaundrySingleton() {
+    }
+
     // Her implementeres constructor mm. så det bliver en singleton-klasse:
     public static LaundrySingleton getInstance() {
         return instance = instance != null ? instance : new LaundrySingleton();
